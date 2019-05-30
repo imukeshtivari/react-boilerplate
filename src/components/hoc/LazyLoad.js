@@ -10,15 +10,19 @@ class Lazyload extends Component {
   };
 
   componentDidMount() {
-    this.props.load()
-      .then((component) => {
-        this.setState({
-          component: component.default || component
+    try {
+      this.props.load()
+        .then((component) => {
+          this.setState({
+            component: component.default || component
+          });
         })
-      })
-      .catch((error) => {
-        this.setState({ error })
-      })
+        .catch((error) => {
+          this.setState({ error });
+        })
+    } catch (error) {
+      this.setState({ error });
+    }
   }
 
   componentDidCatch(error) {

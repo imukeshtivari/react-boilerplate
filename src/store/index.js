@@ -2,7 +2,7 @@ import { createStore, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import createSagaMiddleware from 'redux-saga'
+import createSagaMiddleware from "redux-saga"
 import thunk from "redux-thunk";
 
 // reducers & sagas.
@@ -12,7 +12,7 @@ import rootSaga from "../sagas";
 const persistConfig = {
   key: "store",
   storage,
-  whitelist: ['auth']
+  whitelist: ["auth"]
 };
 
 // initiating the saga middleware.
@@ -34,7 +34,6 @@ if (process.env.NODE_ENV === "production") {
     )
   );
 }
-
 
 // persist reducer.
 const pReducer = persistReducer(persistConfig, rootReducer);

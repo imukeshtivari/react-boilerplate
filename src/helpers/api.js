@@ -9,6 +9,6 @@ export default function () {
 
   return axios.create({
     baseURL: process.env.REACT_APP_API_ENDPOINT,
-    headers: { 'authorization': `bearer ${token}` }
+    headers: { "authorization": `bearer ${token}` }
   });
 }

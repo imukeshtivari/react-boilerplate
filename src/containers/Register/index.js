@@ -1,8 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from "react"
 import { Link } from "react-router-dom";
 import { Container, Form, Button } from "react-bootstrap";
-
-// import api from "../../helpers/api";
 
 class Register extends Component {
 
