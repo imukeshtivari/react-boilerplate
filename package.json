@@ -1,0 +1,46 @@
+{
+  "name": "boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "classnames": "^2.2.6",
+    "dotenv": "^8.0.0",
+    "lodash": "^4.17.11",
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "^3.0.1",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
+    "redux-saga": "^1.0.2",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "npm-run-all -p sass start:js",
+    "build": "npm-run-all build:sass build:js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "sass": "node-sass -w src/styles/scss/main.scss src/styles/css/main.css",
+    "start:js": "react-scripts start",
+    "build:js": "react-scripts build",
+    "build:sass": "node-sass src/styles/scss/main.scss src/styles/css/main.css"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "redux-devtools-extension": "^2.13.8"
+  }
+}
